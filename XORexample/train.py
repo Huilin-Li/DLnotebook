@@ -57,6 +57,10 @@ if __name__ == "__main__":
         print(f"Epoch {t+1}\n-------------------------------")
         train_loop(model=model, optimizer=optimizer, dataloader=train_dataloader,loss_fn=loss_fn )
 
+    # save model 
+    state_dict = model.state_dict()
+    torch.save(state_dict, "/storage/shenhuaizhongLab/lihuilin/DLnotebook/XORexample/XOR_Classifier_model.tar")
+
 
 
 
